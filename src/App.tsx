@@ -4,7 +4,7 @@ import GamesGrid from "./Components/GamesGrid";
 import useGenres, { Genre } from "./hooks/useGenres";
 
 function App() {
-  const { genres } = useGenres();
+  const { data } = useGenres();
   return (
     <Grid
       templateAreas={{
@@ -17,7 +17,7 @@ function App() {
       </GridItem>
       <Show above="lg">
         <GridItem area="aside">
-          {genres.map((genre) => (
+          {data.map((genre) => (
             <li key={genre.id}>{genre.name}</li>
           ))}
         </GridItem>
