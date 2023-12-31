@@ -31,7 +31,7 @@ const useGames = () => {
 
     setLoading(true);
     apiClient
-      .get("/games", { signal: controller.signal })
+      .get<FecthGameList>("/games", { signal: controller.signal })
       .then((res) => {
         setGames(res.data.results);
         setLoading(false);
