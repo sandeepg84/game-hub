@@ -14,6 +14,8 @@ export interface Game {
   background_image: string;
   platforms: { platform: Platform }[];
   metacritic: number;
+  rating: number;
+  rating_top: number;
 }
 
 interface FecthGameList {
